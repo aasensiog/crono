@@ -6,10 +6,7 @@ var timerID = 0;
 var time = null;
 
 $(document).ready(function(){
-        $('#chronotime').html('0:00:00:000');
-	setInterval(function(){
-		$('#currentTime').text(new Date().toLocaleString());
-	}, 1000);
+    $('#chronotime').html('0:00:00:000');
 	
 	$(document).keydown(function(event) {
 		switch(event.which) {
@@ -50,14 +47,14 @@ function chrono() {
 	timerID = setTimeout("chrono()", 10);
 }
 function chronoStart() {
-	document.chronoForm.startstop.value = "Stop";
+	document.chronoForm.startstop.innerHTML = "Stop";
 	document.chronoForm.startstop.onclick = chronoStop;
 	document.chronoForm.reset.onclick = chronoReset;
 	start = new Date();
 	chrono();
 }
 function chronoContinue() {
-	document.chronoForm.startstop.value = "Stop";
+	document.chronoForm.startstop.innerHTML = "Stop";
 	document.chronoForm.startstop.onclick = chronoStop;
 	document.chronoForm.reset.onclick = chronoReset;
 	start = new Date() - diff;
@@ -73,7 +70,7 @@ function chronoStopReset() {
 	document.chronoForm.startstop.onclick = chronoStart;
 }
 function chronoStop() {
-	document.chronoForm.startstop.value = "Start";
+	document.chronoForm.startstop.innerHTML = "Start";
 	document.chronoForm.startstop.onclick = chronoContinue;
 	document.chronoForm.reset.onclick = chronoStopReset;
 	clearTimeout(timerID);

@@ -3,13 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="keywords" content="cronómetro, online, en línea, chronometer, cronometro, sencillo, fácil, easy, simple, útil, utilidades, utility">
-<meta http-equiv="last-modified" content="2013-06-10@12:12:00 TMZ" />
+<meta http-equiv="last-modified" content="2013-09-30@12:12:00 TMZ" />
+
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
 <title>Cronómetro Online</title>
-<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="chrono.js"></script>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="lib/bootstrap/bootstrap.min.js">
+</script><script type="text/javascript" src="chrono.js"></script>
+
+<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="style.css" type="text/css">
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -28,66 +35,75 @@
 <script type="text/javascript">stLight.options({publisher: "8e88d989-ac7f-49d6-9390-072998ad61ef"});</script>
 </head>
 <body>
-	<section>
-	<header>
-		<h1>Cronómetro Online</h1>
-		<span class='sub'>Calcula tu tiempo gratis</span>
-		<img id='chrono' src='img/chronometer.png'></img>
-	</header>
-	<article>
-		<nav id='nav1' class='ad'>
-			<script type="text/javascript"><!--
-				google_ad_client = "ca-pub-6749880217235165";
-				/* nav1 */
-				google_ad_slot = "9673860812";
-				google_ad_width = 160;
-				google_ad_height = 600;
-				//-->
-			</script>
-			<script type="text/javascript" 
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-		</nav>
-		<div id="mainDiv">
-			<div id='container'>
-				<span id='currentTime'></span>
-				<span id="chronotime"></span>
-				</br>
-				<form name="chronoForm">
-				    <input id='startstop' class='button' type="button" name="startstop" value="Start" onClick="chronoStart()" />
-				    <input id='reset' class='button' type="button" name="reset" value="Reset" onClick="chronoReset()" />
-				</form>
-				</br>
-				<hr>
-				<span class='st_sharethis_large' displayText='ShareThis'></span>
-				<span class='st_facebook_large' displayText='Facebook'></span>
-				<span class='st_twitter_large' displayText='Tweet'></span>
-				<span class='st_googleplus_large' displayText='Google +'></span>
-				<span class='st_linkedin_large' displayText='LinkedIn'></span>
-				<span class='st_blogger_large' displayText='Blogger'></span>
-				<span class='st_email_large' displayText='Email'></span>
-				<span class='st_delicious_large' displayText='Delicious'></span>
-				
-				<p class='words'>Cronómetro online, cronometra tu tiempo, sencillo, efectivo, fácil de usar, eficaz, gratis, cronometro gratis, tiempo, calcular tiempo</p>
-				<p class='words'>Online chronometer, time, easy to use, simple, free</p>
-
+	<div class='container'>
+		<div class="jumbotron">
+			<div class='row'>
+				<div class='text-center'>
+					<h1>Cronómetro Online</h1>
+					<span class='sub'>Calcula tu tiempo gratis</span>
+					<img id='chrono' src='img/chronometer.png'></img>
+				</div>
 			</div>
-			</br>
-		</div>
-		<nav id='nav2' class='ad'>
-			<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-6749880217235165";
-			/* nav2 */
-			google_ad_slot = "2150594013";
-			google_ad_width = 160;
-			google_ad_height = 600;
-			//-->
-			</script>
-			<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-		</nav>
-	</article>
-	</section>
+
+		<div class='row'>
+			<div class="col-md-2 col-lg-2 hidden-xs hidden-sm">
+				<nav id='nav1' class='ad'>
+					<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-6749880217235165";
+						/* nav1 */
+						google_ad_slot = "9673860812";
+						google_ad_width = 160;
+						google_ad_height = 600;
+						//-->
+					</script>
+					<script type="text/javascript" 
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</nav>
+			</div>
+
+			<div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+				<div class='text-center jumbotron'>
+					<h1 id="chronotime"></h1>
+					<form name="chronoForm">
+					    <button id='startstop' type="button" class="btn btn-lg btn-primary" name="startstop" value="Start" onClick="chronoStart()">Start</button>
+					    <button id='reset' type="button" class="btn btn-lg btn-primary" name="reset" value="Reset" onClick="chronoReset()">Reset</button>
+					</form>
+
+					<hr>
+				
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_linkedin_large' displayText='LinkedIn'></span>
+					<span class='st_blogger_large' displayText='Blogger'></span>
+					<span class='st_email_large' displayText='Email'></span>
+					<span class='st_delicious_large' displayText='Delicious'></span>
+					
+					<p class='words'>Cronómetro online, cronometra tu tiempo, sencillo, efectivo, fácil de usar, eficaz, gratis, cronometro gratis, tiempo, calcular tiempo</p>
+					<p class='words'>Online chronometer, time, easy to use, simple, free</p>
+				</div>
+			</div>
+
+			<div class="col-md-2 col-lg-2 hidden-xs hidden-sm">
+				<nav id='nav2' class='ad'>
+					<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-6749880217235165";
+					/* nav2 */
+					google_ad_slot = "2150594013";
+					google_ad_width = 160;
+					google_ad_height = 600;
+					//-->
+					</script>
+					<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</nav>
+			</div>
+
+		</div>	
+
+	</div>
+
 </body>
 </html>
