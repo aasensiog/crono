@@ -1,5 +1,85 @@
+body {
+    background-color: darkgrey;
+}
 
-.words{
+.jumbotron {
+    text-align: center;
+}
+.words {
 	font-size: small;
 	color:grey;
+}
+#chronotime {
+    font-size: 120pt;
+}
+
+.coloranimation {
+    animation: 20s color infinite;
+    -webkit-animation: 20s color infinite;
+}
+
+@keyframes color {
+    0% {
+      color: #DD1E2F;
+    }
+    15% {
+      color: #EBB035;
+    }
+    30% {
+      color: #06A2CB;
+    }
+    45% {
+      color: #218559;
+    }
+    60% {
+      color: #D0C6B1;
+    }
+    75% {
+      color: #192823;
+    }
+    88% {
+      color: #460eed;
+    }
+    100% {
+      color: #192823;
+    }
+}
+@-webkit-keyframes color {
+    0% {
+      color: #DD1E2F;
+    }
+    15% {
+      color: #EBB035;
+    }
+    30% {
+      color: #06A2CB;
+    }
+    45% {
+      color: #218559;
+    }
+    60% {
+      color: #D0C6B1;
+    }
+    75% {
+      color: #192823;
+    }
+    88% {
+      color: #460eed;
+    }
+    100% {
+      color: #192823;
+    }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    #chronotime {
+        font-size: 30pt;
+    }
+}
+
+@media only screen and (max-device-width: 960px) {
+    #chronotime {
+        font-size: 60pt;
+    }
 }
