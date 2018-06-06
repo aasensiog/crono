@@ -4,21 +4,25 @@ var end = 0;
 var diff = 0;
 var timerID = 0;
 var time = null;
+var start_string = '0:00:00:000';
 
 $(document).ready(function(){
-    $('#chronotime').html('0:00:00:000');
+    $('#chronotime').html(start_string);
 	
 	$(document).keydown(function(event) {
+		event.preventDefault();
 		switch(event.which) {
 			case 13: //Enter
 			case 37: //Left arrow
 			case 32: //Space bar
 				$('#startstop').click();
+				event.preventDefault();
 				break;
 			case 39: //Right arrow
 			case 46: //Supr
 			case 8:  //Backspace or Del
 				$('#reset').click();
+				event.preventDefault();
 				break;
 		}
 	});
@@ -47,14 +51,14 @@ function chrono() {
 	timerID = setTimeout("chrono()", 10);
 }
 function chronoStart() {
-	document.chronoForm.startstop.innerHTML = "Stop";
+	document.chronoForm.startstop.innerHTML = "<i class='fa fa-caret-square-left'></i> Start";
 	document.chronoForm.startstop.onclick = chronoStop;
 	document.chronoForm.reset.onclick = chronoReset;
 	start = new Date();
 	chrono();
 }
 function chronoContinue() {
-	document.chronoForm.startstop.innerHTML = "Stop";
+	document.chronoForm.startstop.innerHTML = "<i class='fa fa-caret-square-left'></i> Stop";
 	document.chronoForm.startstop.onclick = chronoStop;
 	document.chronoForm.reset.onclick = chronoReset;
 	start = new Date() - diff;
@@ -62,15 +66,15 @@ function chronoContinue() {
 	chrono();
 }
 function chronoReset() {
-	document.getElementById("chronotime").innerHTML = "0:00:00:000";
+	document.getElementById("chronotime").innerHTML = start_string;
 	start = new Date();
 }
 function chronoStopReset() {
-	document.getElementById("chronotime").innerHTML = "0:00:00:000";
+	document.getElementById("chronotime").innerHTML = start_string;
 	document.chronoForm.startstop.onclick = chronoStart;
 }
 function chronoStop() {
-	document.chronoForm.startstop.innerHTML = "Start";
+	document.chronoForm.startstop.innerHTML = "<i class='fa fa-caret-square-left'></i> Start";
 	document.chronoForm.startstop.onclick = chronoContinue;
 	document.chronoForm.reset.onclick = chronoStopReset;
 	clearTimeout(timerID);
