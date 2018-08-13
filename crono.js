@@ -10,20 +10,21 @@ $(document).ready(function(){
     $('#chronotime').html(start_string);
 	
 	$(document).keydown(function(event) {
-		event.preventDefault();
 		switch(event.which) {
-			case 13: //Enter
+			// case 13: //Enter
 			case 37: //Left arrow
-			case 32: //Space bar
+			// case 32: //Space bar
 				$('#startstop').click();
 				event.preventDefault();
 				break;
 			case 39: //Right arrow
-			case 46: //Supr
+			// case 46: //Supr
 			case 8:  //Backspace or Del
 				$('#reset').click();
 				event.preventDefault();
 				break;
+			default:
+				return event;
 		}
 	});
 });
